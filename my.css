@@ -1,0 +1,243 @@
+/* 清除默认样式 */
+*{
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  background-color: #f5f5f5;
+}
+/* 去掉无序列表前面的小圆点 */
+li {
+    list-style: none;
+}
+/* 版头 */
+header {
+  padding: 20px 15%;
+}
+/* 版头介绍文字 */
+header p {
+  margin: 5px auto;
+  font-size: 15px;
+  color: #626675; 
+}
+/* 版头淡绿背景色 */
+header,
+header * {
+  /* height: 325px; */
+  /* 高度不要固定 */
+  background-color: rgb(202, 227, 211);
+}
+/* 概述图部分 */
+header .gaishutu {
+  display: flex;
+  gap: 15px;
+}
+header .gaishutu div {
+  width: 100%;
+  padding-bottom: 20%;
+
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+
+  border-radius: 10px;
+}
+header .gaishutu div:nth-child(1) {
+  background-image: url(./images/gaishutu1.jpg);
+}
+header .gaishutu div:nth-child(2) {
+  background-image: url(./images/gaishutu2.jpg);
+}
+header .gaishutu div:nth-child(3) {
+  background-image: url(./images/gaishutu3.jpg);
+}
+
+/* 主体outline有三个部分：概述、基本信息、演员介绍 */
+/* 主体部分背景颜色 */
+.outline *,
+.basic_info *,
+.actor * {
+  background-color: #fff;
+}
+/* 主体部分样式效果 */
+.outline,
+.basic_info,
+.actor {
+  background-color: #fff;
+  padding: 30px 20px;
+  margin: 0 15% 15px;
+  border-radius: 1px;
+  box-shadow: 0px 0px 1px 0px rgba(168, 168, 168, 1);
+}
+/* 概述 */
+.outline {
+  display: flex;
+  gap: 10px;
+}
+/* 文字部分 */
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.text .container {
+  /* 暂为空 */
+}
+/* 转赞评位置 */
+.zzp {
+  margin-bottom: 20px;
+  font-size: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+/* 转赞评样式 */
+.zzp div {
+  color: #519cea;
+  padding-left: 10px;
+}
+.zzp span {
+  color: #888;
+}
+.zzp div:nth-child(1),
+.zzp div:nth-child(2) {
+  padding-right: 10px;
+  position: relative;
+}
+/* 小竖线 */
+.zzp div:nth-child(1) span::after,
+.zzp div:nth-child(2) span::after {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 70%;
+
+  top: 20%;
+  right: 0;
+  background: #626675;
+}
+
+
+/* 文字简介 */
+.introduction {
+  /* 暂为空 */
+}
+/* 文字简介段落样式 */
+.introduction p {
+    text-indent: 2em;
+    font-size: 17px;
+    line-height: 200%;
+  }
+
+/* 列表 */
+.text .li {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 20px;
+  font-size: 15px;
+}
+.li .name {}
+.li .type {}
+.li .actors {}
+.li .director a {
+  color: #519cea;
+}
+.li div span:nth-child(1) {
+  display: inline-block;
+  width: 25%;
+}
+.li div span:nth-child(2) {
+  color: #747474;
+}
+/* 海报 */
+.poster {
+  width: 450px;
+}
+.poster img {
+  width: 100%;
+}
+
+/* 2.基本信息 */
+.basic_info {
+  /* 暂为空 */
+}
+/* 板块标题 */
+.basic_info h2,
+.actor h2 {
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  font-size: 25px;
+}
+/* 小方块 */
+.basic_info h2 span::before,
+.actor h2 span::before {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 75%;
+
+  top: 5px;
+  left: -20px;
+  width: 10px;
+  background-color: #003eb3;
+}
+
+/* 细横线 */
+.basic_info h2 .line,
+.actor h2 .line {
+  background-color: #eee;
+  color: #999;
+  /* 占据所有剩余空间 */
+  flex-grow: 1;
+  height: 1px;
+  margin-left: 10px;
+  margin-top: 16px;
+  
+}
+/* 组合信息 */
+.basic_info .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 17px;
+}
+.basic_info .container .li {
+  display: flex;
+  border-bottom: 1px dotted #999;
+  height: 36px;
+  line-height: 36px;
+}
+.basic_info .container .li .info {
+  width: 25%;
+  color: #999;
+}
+.actor .container {
+  /* 暂为空 */
+}
+.cy,
+.zsx,
+.xsy {
+  display: flex;
+  padding: 1.2rem 0;
+  gap: 10px;
+}
+.cy img,
+.zsx img,
+.xsy img {
+  width: 150px;
+}
+.cy,
+.zsx {
+  border-bottom: 1px solid #e4e4e4;
+}
+.role_name {
+  color: #003eb3;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.actor_name {
+  color: #999;
+  font-size: 18px;
+}
+.role_introduction {
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 200%;
+}
